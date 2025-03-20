@@ -381,9 +381,9 @@ const GUIComponent = (props) => {
                                             ) : null}
                                         </TabPanel>
                                     </Tabs>
-                                    {backpackVisible ? (
+                                    {/* {backpackVisible ? (
                                         <Backpack host={backpackHost} />
-                                    ) : null}
+                                    ) : null} */}
                                 </Box>
 
                                 <Box
