@@ -317,3 +317,12 @@ $fade-out-distance: 15px;
 :global(.ReactModal__Body--open) {
     overflow: hidden;
 }
+
+.view{
+    padding-left:20px;
+    font-size: 14px;
+}
+.open{
+    color: #0078d4;
+    cursor: pointer;
+}

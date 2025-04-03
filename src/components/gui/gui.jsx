@@ -155,6 +155,10 @@ const GUIComponent = (props) => {
         isRendererSupported = Renderer.isSupported();
     }
 
+    const open = () => {
+        window.open("https://github.com/eseylearning/scratch");
+    };
+
     return (
         <MediaQuery minWidth={layout.fullSizeMinWidth}>
             {(isFullSize) => {
@@ -381,9 +385,15 @@ const GUIComponent = (props) => {
                                             ) : null}
                                         </TabPanel>
                                     </Tabs>
-                                    {/* {backpackVisible ? (
-                                        <Backpack host={backpackHost} />
-                                    ) : null} */}
+                                    <div className={styles.view}>
+                                        本功能遵循开源
+                                        <span
+                                            onClick={open}
+                                            className={styles.open}
+                                        >
+                                            查看代码
+                                        </span>
+                                    </div>
                                 </Box>
 
                                 <Box
