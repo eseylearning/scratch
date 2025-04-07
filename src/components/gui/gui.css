@@ -320,9 +320,10 @@ $fade-out-distance: 15px;
 
 .view{
     padding-left:20px;
-    font-size: 14px;
+   
 }
 .open{
-    color: #0078d4;
+    color: #bbb;
     cursor: pointer;
+    font-size: 12px;
 }

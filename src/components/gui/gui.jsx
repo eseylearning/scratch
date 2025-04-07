@@ -386,12 +386,11 @@ const GUIComponent = (props) => {
                                         </TabPanel>
                                     </Tabs>
                                     <div className={styles.view}>
-                                        本功能遵循开源
                                         <span
                                             onClick={open}
                                             className={styles.open}
                                         >
-                                            查看代码
+                                            本功能遵循开源
                                         </span>
                                     </div>
                                 </Box>
