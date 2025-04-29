@@ -46,7 +46,7 @@ class LanguageMenu extends React.PureComponent {
                 <div
                     className={styles.option}
                     onClick={this.props.onRequestOpen}
-                    onMouseOver={this.handleMouseOver}
+                   
                 >
                     <img className={styles.icon} src={languageIcon} />
                     <span className={styles.submenuLabel}>
