@@ -51,7 +51,7 @@ class LanguageMenu extends React.PureComponent {
                     <img className={styles.icon} src={languageIcon} />
                     <span className={styles.submenuLabel}>
                         <FormattedMessage
-                            defaultMessage="Language"
+                            defaultMessage="Language" 
                             description="Language sub-menu"
                             id="gui.menuBar.language"
                         />

@@ -69,14 +69,11 @@ class GUI extends React.Component {
         this.props.onStorageInit(storage);
         this.props.onVmInit(this.props.vm);
         setProjectIdMetadata(this.props.projectId);
-        const lang = getQueryParam("lang");
+
         const url = getQueryParam("url");
         if (url) {
             this.props.onLinkUpload(url);
         }
-        setTimeout(() => {
-            this.props.onChangeLanguage(lang || "zh-tw");
-        }, 100);
     }
     componentDidUpdate(prevProps) {
         if (this.props.projectId !== prevProps.projectId) {
@@ -209,10 +206,6 @@ const mapDispatchToProps = (dispatch) => ({
     onRequestCloseBackdropLibrary: () => dispatch(closeBackdropLibrary()),
     onRequestCloseCostumeLibrary: () => dispatch(closeCostumeLibrary()),
     onRequestCloseTelemetryModal: () => dispatch(closeTelemetryModal()),
-    onChangeLanguage: (locale) => {
-        console.log("LanguageMenu -> locale", locale);
-        dispatch(selectLocale(locale));
-    },
 });
 
 const ConnectedGUI = injectIntl(
