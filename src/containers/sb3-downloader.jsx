@@ -4,7 +4,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { projectTitleInitialState } from "../reducers/project-title";
 import downloadBlob from "../lib/download-blob";
-import { appDownload } from "../lib/appUtils";
+import { appdownload } from "../lib/appUtils";
 /**
  * Project saver component passes a downloadProject function to its child.
  * It expects this child to be a function with the signature
@@ -30,12 +30,16 @@ class SB3Downloader extends React.Component {
                 this.props.onSaveFinished();
             }
             if (getQueryParam("app") === "1") {
-                console.log(333);
-                appDownload({
-                    filename: this.props.projectFilename,
-                    content: content,
-                });
-                return;
+                // 将文件流转换为base64格式
+                const reader = new FileReader();
+                reader.onload = function () {
+                    const base64String = reader.result.split(",")[1]; // 移除data:xxx;base64,前缀
+                    appdownload({
+                        filename: this.props.projectFilename,
+                        content: base64String,
+                    });
+                }.bind(this);
+                reader.readAsDataURL(content);
             } else {
                 downloadBlob(this.props.projectFilename, content);
             }

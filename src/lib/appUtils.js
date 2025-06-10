@@ -50,7 +50,7 @@ function getAppMethod(methodName) {
     }
 }
 
-export function appDownload(options) {
-    const func = getAppMethod("appDownload");
-    func && func(options);
+export function appdownload(options) {
+    const func = getAppMethod("appdownload");
+    func && func(JSON.stringify(options));
 }
